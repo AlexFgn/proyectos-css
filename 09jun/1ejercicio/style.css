@@ -1,0 +1,56 @@
+body{
+  background-color: aquamarine;
+  margin: 0; /*Es para eliminar margenes por defecto*/
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+header{
+  background-color: rgba(8, 8, 97, 0.714); /*para el color de fondo*/
+  color: azure; /*para el color de la letra*/
+  padding: 1rem;
+  text-align: center; /*para indicar el encabezado centrado, drecha o izquierda */
+}
+
+footer{
+  background-color: rgb(14, 96, 96);
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;  /* para cambiar el tamaño de la letra*/
+}
+
+.footer-text{     /*para darle color al contenido del interior del footer con una clase, en este caso "footer-text"*/
+  color: white;
+}
+
+h1{
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem; /*para indicar el tamaño del margen en la parte inferior*/
+}
+
+h2{
+  font-size: 1.8rem;
+  color: blueviolet;
+  margin-top: 1.5rem;  /*para indicar el tamaño del margen en la parte superior*/
+}
+
+p{
+  line-height: 1.6; /*Mejorar la legibilidad, para textos largos  1-Muy apretado dificil de leer, 1.2- Estandar minimo, 1.5 / 1.6 legible y comodo para la lectura, 2- Muy espacioso, estilo revista */
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.destacado{   /*para destacar un parrafo en concreto que queremos, antes tenemos que darle una clase en index, en este caso ".destacado"*/
+  background-color: yellow;
+  padding: 0.5rem; 
+  border-left: 4px solid white;  /* para tamaño de margen izquierdo, en este caso en el parrafo en concreto*/
+}
+
+/* 1rem = El tamña de fuente html 16px
+  1rem = 16px
+  0.5= 8px
+  2rem= 32px
+
+  1. Accesibilidad= los valores en rem se ajusta automaticamentes.
+  2. Consistencia= Permite mantener propoorciones coherentes.
+  3. Escabilidad= puedes cambiar la escala a la web */
