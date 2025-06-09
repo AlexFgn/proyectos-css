@@ -1,0 +1,116 @@
+body{
+  /*Fondo con imagen*/
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  background-size: cover; /* Para no duplicar la imagen*/
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px; /*Este es un espaciado interior del body*/
+
+}
+
+h1, h2, p{
+  text-align: center; /*Centra todos los titulos  parrafos*/
+}
+
+/*Estilo del contenedor principal*/
+.menu{
+  width: 80%; /*Ocupa el 80% del ancho del dispositivo (tablet, movil, etc)*/
+  background-color: burlywood; /* Este color porque tiene un color similar a la imagen del cafe y del pastel */
+
+  margin-left: auto; /*Centrado horizontalmente*/
+  margin-right: auto; 
+  padding: 20px; /*Espacio interior*/
+  max-width: 500px; /*Ancho maximo*/
+
+}
+
+.flavor, .dessert{
+  text-align: left; /*Alineacion izquierda*/
+  width: 75%; /* 75% del espaciado horizontal*/
+}
+/*Estilos para los precios*/
+.price{
+  text-align: right;
+  width: 25%;
+}
+
+.item{
+  display: flex; /*Para poder colocarlo en la derecha porque sin este ".item" no funcionaba*/
+}
+/*Estiloos de los parrafos dentro de cada articulo*/
+.item p{
+  display: inline-block; /*Elementos en linea con dimensiones*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/*Fuente especial para titulos*/
+h1, h2{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Estilo de texto "Est.20"*/
+.established{
+  font-style: italic; /*cursiva*/
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+/*EStilo especifico del titulo principal*/
+h1{
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  
+}
+
+h2{
+  font-size: 30px;
+}
+
+/*linea horizontal de separacion*/
+hr{
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+/*La linea final con espacio adicional arriba*/
+.bottom-line{
+  margin-top: 25px;
+}
+
+/*Estilo de pie de pagina*/
+.footer{
+  font-size: 14px;
+}
+
+/*Enlaces (en estado normal) para cambiar el color del enlace, porque normalmente es azul*/
+a{
+  color: black;
+}
+/*Enlace visitados*/
+a:visited{
+  color: blue;
+}
+
+/*Enlace al pasar el cursor*/
+a:hover{
+  color: brown;
+}
+
+/*Enlace activos (click)*/
+a:active{
+  color: brown;
+}
+
+.address{
+  margin-bottom: 5px;
+}
+
+img{
+  display: block; /*Quita el espacio extra debajo*/
+  margin-right: auto; /*Centrado horizontal*/
+  margin-left: auto;
+  margin-top: -25px; /*Sube la imagen un poco*/
+}
