@@ -1,0 +1,40 @@
+body{
+  height: 100vh; /* Es para que el body ocupe el 100% del navegador*/
+  display: grid; /* Divide el body en celdas*/
+  /* Definir cuantas columnas y de que ancho*/
+  /* 1fr es el tamaño restante */
+  grid-template-columns: 25% 1fr;  /* 1fr es lo que resta de la pantalla*/
+  
+  /*Definir cuantas filas y su alto*/
+  grid-template-rows: 50px 1fr 50px;
+
+  /*Dar un nombre a las celdas por filas*/
+  grid-template-areas: 
+  "zheader zheader"
+  "znav zmain"
+  "zfooter zfooter";
+}
+
+/*Ultimo paso: Asignar cada area de la web a cada zona*/
+header{
+  grid-area: zheader;
+  background-color: aqua;
+  color: black;
+}
+
+nav{
+  grid-area: znav;
+  background-color: aquamarine;
+}
+
+main{
+  grid-area: zmain;
+  background-color: darkcyan;
+  color: white;
+}
+
+footer{
+  grid-area: zfooter;
+  background-color: blueviolet;
+  color: white;
+}
