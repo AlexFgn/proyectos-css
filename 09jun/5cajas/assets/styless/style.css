@@ -1,0 +1,63 @@
+*{margin:0;
+  padding: 0;
+  box-sizing: border-box; 
+} 
+
+body{
+  height: 100vh; /*ocupa toda la altura de la ventana*/
+  display: grid;
+  grid-template-columns: 1fr; /*una sola columna*/
+  grid-template-rows: 10% 15% 1fr 10%;
+  grid-template-areas: 
+    "zh"  /*header*/
+    "zn"  /*nav*/
+    "zm"  /*main*/
+    "zf"  /*footer*/
+    ; 
+}
+
+header{
+  grid-area: zh;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  display: flex; /*flexbox para distribucion interna*/
+  justify-content: space-between; /*Espacio entre elemento*/
+  text-align: center;
+}
+
+#logo{
+  display: flex;
+  align-items: center;  /*centrar verticalmente*/
+}
+
+#titulo{
+  margin-right: 50%; /* margen derecho para la separacion*/
+  display: flex;
+  align-items: center; /*centrar verticalmente*/
+}
+
+/*Imagen del logo*/
+header > div > img{
+  max-height: 80px; /*Tamaño maximo alto*/
+  padding: 10px; /*Espacio interno*/
+  margin-left: 10px; /* margen izquierdo*/
+}
+
+nav{
+  grid-area: zn; /*area del grid para nav*/
+  background-color: gray;
+  color: white;
+  display: flex; /*flexbox*/
+  align-content: center; /*Centrar contenido verticalmente*/
+  justify-content: space-between; /*Espacio entre elementos*/
+  padding: 10px; /*Espacio interno*/
+}
+
+nav > div{
+  font-size: 20px;
+}
+
+nav > div:hover{
+  color: yellow; /*cambia el cursor del a amarillo*/
+}
