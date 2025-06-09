@@ -1,0 +1,42 @@
+/*elimina los margenes*/
+*{margin:0;
+  padding: 0;
+  box-sizing: border-box; 
+} 
+
+body{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20% 20% 1fr 10%;
+  grid-template-areas: 
+  "zheader"
+  "znav"
+  "zmain"
+  "zfooter";
+}
+
+header{
+  grid-area: zheader;
+  background-color: green;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  
+}
+
+nav{
+  grid-area: znav;
+  background-color: rgb(12, 231, 99);
+}
+
+main{
+  grid-area: zmain;
+  background-color: yellowgreen;
+  color: white;
+}
+
+footer{
+  grid-area: zfooter;
+  background-color: aqua;
+}
