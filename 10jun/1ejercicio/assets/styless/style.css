@@ -1,0 +1,36 @@
+*{
+  box-sizing: border-box; 
+} 
+
+body{
+  font-family: sans-serif;
+  padding: 20px;
+  background: beige;
+  /*background-color= "color de fondo"
+    background= "color de fondo"
+    OJO el background ->image...*/
+} 
+
+h1{
+  margin-bottom: 20px;
+}
+
+.caja{
+  width: 300px;
+  padding: 20px;
+  border: 10px solid; /*sino ponemos "solid" no aparece el borde*/
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+/* Primera caja usa content-box (por defecto)*/
+.content-box{
+  box-sizing: content-box;
+  border-color: aquamarine;
+}
+
+/*Segunda caja usa border-box */
+.border-box{
+  box-sizing: border-box;
+  border-color: brown;
+}
