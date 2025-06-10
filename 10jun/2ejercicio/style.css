@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Para que las cajas ocupen el widht real sin aumento*/
+}
+
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgba(180, 0, 0, 0.725);
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nav-principal{
+  display: flex;
+  background-color: rgb(222, 184, 135);
+  padding: 0.75rem 1.5rem;
+  align-items: center;
+}
+
+.nav-principal a{
+  color: azure;
+  font-weight: bold; /*hace el texto en negrita*/
+  margin-right: 1.5rem;
+}
+
+.nav-principal a:last-child{
+  margin-right: 0;
+}
+
+.nav-principal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-principal{
+  display: flex;
+  margin: 1rem auto;
+  max-width: 1200px; 
+}
+
+.columna-main{
+  flex: 3; /*Ocupa 3 fracciones*/
+  background-color: rgba(162, 7, 7, 0.438);
+  padding: 1.5rem;
+  margin-right: 1rem;
+}
+
+.columna-sidebar{
+  flex: 1;
+  background-color: rgb(136, 3, 3);
+  padding: 1rem;
+}
+
+.columna-main{
+  flex-grow: 3; /*Permite que la columna principal crezca 3 veces mas que las otras columnas*/
+  flex-shrink: 1; /*Permite que la columna principal se encoja si es necesario*/
+  flex-basis: 0; /*Tamaño inicial de la columna principal antes de crecer*/
+}
