@@ -1,0 +1,199 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*esto hace que el ancho y el alto incluyan paddinvg y border*/
+}
+
+/*layaout por grid*/
+ body{
+  min-height: 100vh; /*la altura minima del alto de la ventana */
+  display: grid; /*convierte al body en un contenedor grid*/
+  grid-template-columns: 15% 1fr; /*Define dos columnas 1 15% y el resto de 1fr*/
+  grid-template-rows: 60px 1fr 30px; /*Define 3 filas header 60 main flexible (resto) footer 30%*/
+  grid-template-areas: 
+  "zh zh"
+  "znav gallery"
+  "zf zf";
+  background: #004443;
+  color: white;
+  font-family: sans-serif;
+ }
+
+ header{
+  grid-area: zh;
+  background-color: #002e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+ }
+
+ nav{
+  grid-area: znav;
+  max-width: 100%; /*no exceder el ancho de su contenedor padre*/
+  background: #00755ca4;
+  padding: 1rem; /*Relleno interno*/
+  overflow-wrap: break-word; /*Permite que el texto se divida si es muy largo*/
+ }
+
+ nav ul{
+  list-style: none; /*Elimina los puntitos de las listas el "none"*/
+ }
+
+ nav li + li{
+  margin-top: 1rem; /* añade espacio superior a cada <li> excepto el primero*/
+ }
+
+ .nav-button{
+  display: inline-block; /*Sirve para poder aplicar el padding y border*/
+  padding: 0.5rem 1 rem; /*Relleno interno (0.5= arriba/abajo;  1=izquierda/derecha)*/
+  background-color: rgba(81, 81, 81, 0.768);
+  color: white;
+  text-decoration: none; /*sin subrayado en los enlaces*/
+  border-radius: 0.3rem;  /*Bordes redondeados*/
+  transition: background 0.2s; /*transicion suave al cambiar de fondo*/
+  text-transform: uppercase;
+  font-family: garamond;
+  
+  
+ }
+
+ .nav-button:hover{
+  background: rgba(0, 0, 255, 0.527); /*Para cambiar de color el fondo de los nav cuando pasamos con el cursor*/
+ }
+
+ main{
+  padding: 2rem; /*Ajusta a tu gusto:1rem , 1.5rem, etc...*/
+ }
+
+ .gallery{
+  display: grid; /*Contenido grid para las miniaturas*/
+  gap: 2rem; /* Espacio de 2 rem entre filas y columnas*/
+  grid-auto-rows: auto; /*Altura fija de 300px para cada fila*/
+  justify-content: center; /*Centra el grid horizontalmente*/
+ }
+
+ /*Miniaturas*/
+ .thumb{
+  width: 100%; /*Ancho al 100% del contenido grid*/
+  height: 100€; /*alto al 100% /300px) del contenedor grid*/
+  overflow: hidden; /*Oculta lo que desborde de su contenedor*/
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  transition: 
+    border-radius 0.4s ease, /*Animacion de cambio de radio*/
+    transform 0.3s ease, /*Animacion del escalado*/
+    box-shadow 0.4s ease; /*Animacion de la sombra*/
+ }
+
+ /*Al pasar el cursor*/
+ .thumb:hover{
+  border-radius: 1rem; /*Aumentar el redondeo al pasar el cursor*/
+  transform: scale(1.05); /*Escala un 5% para efecto zoom*/
+  box-shadow: 0 0 15px red;
+ }
+
+ /*imagen dentro de la miniatura*/
+ .thumb img{
+  display: block; /*Elimina espacio de linea*/
+  width: 100%; /*Ancho completo del contenedor .thumnb*/
+  height: 100%;  /*Alto completo del contenedor .thumb*/
+  object-fit: contain; /*Escala la imagen para verla entera*/
+  object-position: center; /*Centra la imagen dentro del contenedor/ escalable*/
+ }
+
+ .portada img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /*Cubre todo el contenedor si es necessario*/
+ }
+
+ footer{
+  grid-area: zf;
+  background-color: #00755c9f;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+ }
+
+ /* Centrar la imagen de la portada*/
+ .gallery-portada{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+ }
+
+ .gallery-portada img{
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+ }
+
+ /*Media queries para responsividad*/
+
+ /*Pantallas hasta 600px*/
+ @media (max-width: 600px){
+  body{
+    grid-template-columns: 1fr; /*una sola columna*/
+    grid-template-rows: 60px auto 1fr 30px;
+    grid-template-areas: 
+      "zh"
+      "znav"
+      "gallery"
+      "zf";
+  }
+
+  nav ul{
+    list-style: none; /*sin viñetas*/
+    padding: 0; /*Sin relleno*/
+    margin: 0; /*sin margenes*/
+    display: flex; /*Flex horizontal*/
+    justify-content: center; /*centra botones horizontalmente*/
+    gap: 1rem; /*espacio entre botones*/
+    flex-wrap: wrap; /*permite salto de li*/
+  }
+
+  nav li + li{
+    margin-top: 0; /*quita el espacio superior (ahora son flex)*/
+  }
+
+  .gallery{
+    justify-content: center; /*Centrar la galeria*/
+    grid-template-columns: 1fr; /*1 solo columna*/
+  }
+ }
+
+ /*Pantalla entre 601px y 900px*/
+
+ @media (min-width:601px) and (max-width:900px) {
+  .gallery{
+    grid-template-columns: repeat(2,1fr); /*Creo dos columnas iguales, si quiero hacer mas columnas tengo que cambiar el "2" en este caso, 3, 4, 5 las columnas que quiera*/
+
+
+  .nav-button{
+    padding: 0.1rem 0.3rem; /*Menos padding para ajustar botones*/
+    font-size: 0.9rem; /*Ligeramente mas pequeño*/
+  }
+}
+ }
+
+
+
+
+
+
+  @media (min-width:901px) and (max-width:1400px) {
+  .gallery{
+    grid-template-columns: repeat(3,1fr); /*Creo dos columnas iguales*/
+
+
+  .nav-button{
+    padding: 0.1rem 0.3rem; /*Menos padding para ajustar botones*/
+    font-size: 0.9rem; /*Ligeramente mas pequeño*/
+  }
+}
+  }
