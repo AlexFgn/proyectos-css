@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #c66572;
+  font-size: 14px;
+  font-family: savate; 
+}
+
+/*Centra el contenedor principal*/
+.container{
+  width: 80%; /*Ocupa el 80% del ancho de cualquier dispositivo*/
+  margin: 50px auto; /*Margen superior e inferior de 50px, y centrado horizontal*/
+}
+
+/*Caja de contacto con fondo blanco y layaout en flex*/
+.contact-box{
+  background: white;
+  display: flex;  /*Los forma en filas a sus "hijos"*/
+}
+
+.contact-left{
+  flex-basis: 40%; /*Ocupa el 40%del espacio disponible en el contactbox*/
+  padding: 40px; /*Relleno interno uniforme de 40px*/
+  /*background-color: #a04c59;
+  color: black;*/
+}
+
+.contact-right{
+  flex-basis: 50%;
+  padding: 50px;
+  background-color: beige;
+  color: black;
+}
+
+
+/*Estilo general para todos titulos h1*/
+h1 {
+  margin-bottom: 10px; /*separacion inferior de 10px*/
+}
+
+/*Parrafos dentro de .container*/
+.container p{
+  margin-bottom: 40px; /*separacion inferior de 40 px*/
+}
+
+/*Filas de inputs dispuestas en flex y espaciados*/
+.input-row{
+  display: flex;
+  justify-content: space-between; /* Espacio igual entre elementos*/
+  margin-bottom: 20px;
+}
+
+/*Cada grupo de input dentro del .input-row*/
+.input-row .input-group{
+  flex-flow: 45%;  /*Cada grupo ocupa el 45% del ancho de la fila*/
+}
+
+/*Estilo generico para todos los input*/
+input {
+  width: 100%;
+  border: none; /*sin borde*/
+  border-bottom: 2px solid black; /*linea inferior blanca*/
+  outline: none; /*sin contorno al enfocarlo*/
+  padding-bottom: 5px; /*Un relleno inferior de 5px*/
+}
+
+/*Estilo para <textarea>*/
+textarea {
+  width: 100%;
+  border: 1px solid gray;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box; /*incluye paddin y border*/
+}
+
+/*Estilos a las etiquetas*/
+label{
+  margin-bottom:6px; /*Separacion inferior de 6px*/
+  display: block; /*Se muestran como bloque para respetar imagenes*/
+  color: black; 
+}
+
+/*Estilos para los botones*/
+button{
+  background: grey;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: white;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 30px;
+  box-shadow: 0px 5px 15px 0px black;
+  cursor: pointer; /*Cambia el cursor al pasar el raton*/
+}
+
+/*Estilo para los h3 dentro del .contac-left*/
+.contact-left h3{
+  columns: blue; /*Posible error tipografico "columns no es propiedad valida del color"*/
+  font-weight: 600; /*Grosor de la fuente seminegrita*/
+  margin-bottom: 30px; /*Separacion inferior de 30px*/
+}
+
+tr td:first-child{
+  padding-right: 20px; /*Espacio a la derecha para separar columna*/
+}
+
+tr td{
+  padding-top: 20px; /*Espacio arriba de 20px para separar las filas*/
+}
