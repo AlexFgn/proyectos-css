@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Incluye padding y borde en ancho alto total*/
+  font-family: "Savate", sans-serif; /*Define fuente base para toda la pagina*/
+}
+
+/*Seccion principal ("hero") de la pagina*/
+.hero{
+  width: 100%;
+  min-height: 100vh; /*Altura minima igual a la altura de la ventana*/
+  background-image: url(/assets/images/fondo.jpg); /*imagen de fondo*/
+  background-position: center; /*Centrar la imagen de fondo*/
+  background-size: cover; /*Cubre todo el contenedor (para que no salga repetida)*/
+  padding: 10px 10%; /*Espacio interno 10px arriba y abajo, 10% izquierda a derecha*/
+  overflow: hidden; /*oculta cualquier contenido que sobresalga (Para que la chica del ejercio de mueva segun el tamaño de la ventana)*/
+  position: relative; /*Sirve como referencia para elementos posicionados dentro*/
+}
+
+/*Barra de navegacion*/
+nav{
+  padding: 10px 0; /*espacio arriba y abajo de 10px*/
+  display: flex; /*Activa modelo flex para alinear elementos*/
+  align-items: center; /*Centra verticalmente los hijos*/
+  justify-content: space-between; /*Separa los hijos al maximo a ambos extremos*/
+}
+
+/*Logo dentro de nav*/
+.logo{
+  width: 140px; /*Ancho fijo de 140px*/
+}
+
+/*Items de la lista de la navegacion*/
+nav ul li {
+  display: inline-block; /*muestra los "li" en linea, como en bloques*/
+  list-style: none; /*Elimina los puntos de la lista*/
+  margin: 10px 15px; /*margenes alrededor de cada item*/
+}
+
+/*Enlaces dentro de los items de navegacion*/
+nav ul li a {
+  text-decoration: none; /*Elimina el subrayado de los link*/
+  color: #333;
+  font-weight: 400; /*grosor de la letra*/
+}
+
+/*Boton de login*/
+.logn-btn {
+  text-decoration: none;
+  color: #333;
+  margin-right: 15px;  /*Separacion a la derecha*/
+  font-weight: 400;
+}
+
+.btn{
+  display: inline-block; /*bloque en linea*/
+  text-decoration: none; 
+  padding: 14px 40px;
+  text-transform: uppercase;
+  color: black;
+  background-image: url(/assets/images/boton.jpg); /*Degradado en diagonal*/
+  font-size: 14px;
+  border-radius: 30px;
+  border-top-left-radius: 0; /*Esquina superior izquierda sin redondeo*/
+  transition: 0.5s; /*Transicion suave para cambios*/
+  }
+
+  /*Contenedor de contenido dentro de .hero*/
+  .content{
+    margin-top: 10%; /*Separacion superior relativa al contenedor padre*/
+    max-width: 600px; /*Ancho maximo de 600px*/
+  }
+
+  /*Titulo principal dentro de .content*/
+  .content h1 {
+    font-size: 70px;
+    color: #222;  
+  }
+
+  /*parafo descriptivo dentro de .content*/
+  .content p {
+    margin: 10px 0 30px; /*margenes: 10px arriba, 0px a los lados, 30px abajo*/
+    color: #333;
+    animation-delay: 0.5s;/*Restraso de 0.5s antes de iniciar la inimacion*/
+  }
+
+  .content .btn {
+    padding: 15px 80px; /*Relleno para destacar*/
+    font-size: 16px;
+    animation-delay: 1s; /*Retraso de 1s antes de iniciar animacion*/
+  }
+
+  /*Efecto hover, cambia de color al psar el cursor; Cambiar redondeo de la esquina al psar*/
+  .btn:hover{
+    border-top-right-radius: 0%;
+    background-image: linear-gradient(#373B44, #4286f4); /*para cambiar de color el boton al pasar el cursor*/
+  }
+
+  /*imagen destacada dentro de .hero*/
+  .features-img{
+    width: 530px;
+    position:absolute; /*posicionamiento absoluto respecto a .hero*/
+    bottom: 0;  /*Pegada  al fondo del contenedor .hero*/
+    right: 10%;  /*Separada un 10% del borde derecho*/
+  }
+
+  /*variante animada de .feature-img*/
+  .features-img.anim{
+    animation-delay: 1.5s;
+  }
+
+  .anim {
+    opacity: 0; /*Empieza invisible*/
+    transform: translateY(30px); /*Desplazado 30px hacia abajo*/
+    animation: moveup 0.5s linear forwards; /*Ejecuta la animacion "moveup"*/
+  }
+
+/*Definicion de la animacion moveup*/
+@keyframes moveup {
+  100% {
+    opacity: 1; /*Termina completamente visible*/
+    transform: translateY(0px); /*Termina en su posicion original*/
+  }
+}
